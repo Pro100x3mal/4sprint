@@ -65,7 +65,7 @@ func TrainingInfo(data string, weight, height float64) string {
 	steps, trainingType, duration, err := parseTraining(data)
 	if err != nil {
 		fmt.Println(err)
-		return ""
+		return "неизвестный тип тренировки"
 	}
 	dist := distance(steps)
 	speed := meanSpeed(steps, duration)
